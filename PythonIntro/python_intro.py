@@ -7,7 +7,8 @@
 
 
 # Problem 1 (write code below)
-
+if __name__ == "__main__":
+    print("Hello, world!")
 
 # Problem 2
 def sphere_volume(r):
