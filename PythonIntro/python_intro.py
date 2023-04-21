@@ -1,8 +1,8 @@
 # python_intro.py
 """Python Essentials: Introduction to Python.
-<Name>
-<Class>
-<Date>
+<Alex Wold>
+<MTH 420>
+<4/17/23>
 """
 
 
@@ -12,18 +12,14 @@ if __name__ == "__main__":
 
 # Problem 2
 def sphere_volume(r):
-    """ Return the volume of the sphere of radius 'r'.
-    Use 3.14159 for pi in your computation.
-    """
-    raise NotImplementedError("Problem 2 Incomplete")
+    pi=3.14159
+    return 3/4*pi*r**3
 
 
 # Problem 3
 def isolate(a, b, c, d, e):
-    """ Print the arguments separated by spaces, but print 5 spaces on either
-    side of b.
-    """
-    raise NotImplementedError("Problem 3 Incomplete")
+    print(a, b, c, sep="     ", end="  ")
+    print(d, e, sep="  ")
 
 
 # Problem 4
@@ -96,3 +92,6 @@ def alt_harmonic(n):
     harmonic series, which approximates ln(2).
     """
     raise NotImplementedError("Problem 8 Incomplete")
+
+print(sphere_volume(3))
+isolate(1, 2, 3, 4, 5)
