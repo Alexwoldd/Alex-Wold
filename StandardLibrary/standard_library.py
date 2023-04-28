@@ -1,17 +1,21 @@
 # standard_library.py
 """Python Essentials: The Standard Library.
-<Name>
-<Class>
-<Date>
+<Alexandra Wold>
+<MTH 420>
+<4/28>
 """
 
 
 # Problem 1
 def prob1(L):
-    """Return the minimum, maximum, and average of the entries of L
-    (in that order, separated by a comma).
-    """
-    raise NotImplementedError("Problem 1 Incomplete")
+    return(min(L),max(L),sum(L)/len(L))
+
+
+           
+           
+my_list=[1, 2, 3]
+print(prob1(my_list))
+
 
 
 # Problem 2

@@ -24,27 +24,13 @@ def isolate(a, b, c, d, e):
 
 # Problem 4
 def first_half(my_string):
-    """ Return the first half of the string 'my_string'. Exclude the
-    middle character if there are an odd number of characters.
-
-    Examples:
-        >>> first_half("python")
-        'pyt'
-        >>> first_half("ipython")
-        'ipy'
-    """
-    raise NotImplementedError("Problem 4 Incomplete")
+    n=len(my_string)//2
+    return(my_string[:n])
 
 def backward(my_string):
-    """ Return the reverse of the string 'my_string'.
-
-    Examples:
-        >>> backward("python")
-        'nohtyp'
-        >>> backward("ipython")
-        'nohtypi'
-    """
-    raise NotImplementedError("Problem 4 Incomplete")
+    n=len(my_string)//2
+    return(my_string[-n:])
+    
 
 
 # Problem 5
@@ -95,3 +81,5 @@ def alt_harmonic(n):
 
 print(sphere_volume(3))
 isolate(1, 2, 3, 4, 5)
+print(first_half("oregonstate"))
+print(backward("oregonstate"))
