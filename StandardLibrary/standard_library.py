@@ -20,25 +20,51 @@ print(prob1(my_list))
 
 # Problem 2
 def prob2():
-    """Determine which Python objects are mutable and which are immutable.
-    Test integers, strings, lists, tuples, and sets. Print your results.
-    """
-    raise NotImplementedError("Problem 2 Incomplete")
+    int1 = 4
+    int2 = int1
+if int1 == int2:
+    print("this is mutable")
+else:
+    print("this is immutable")
+#list
+college = ("oregon","state","university")
+OSU = college
+if college == OSU:
+    print("this is mutable")
+else:
+    print("this is immuatble")
+#str
+Str1 = "Hello"
+Str2 = Str1 
+if Str1 == Str2:
+    print("this is mutable")
+else:
+    print("this is immutable")
+#tuple
+tuple1 = (1,2,3)
+tuple2 = tuple1
+if tuple1 == tuple2:
+    print("this is mutable")
+else:
+    print("this is immutable")
+#set
+set1= {1,2,3}
+set2 = set1
+if set1 == set2:
+    print("this is mutable")
+else:
+    print("this is immutable")
+
+
 
 
 # Problem 3
 def hypot(a, b):
-    """Calculate and return the length of the hypotenuse of a right triangle.
-    Do not use any functions other than sum(), product() and sqrt() that are
-    imported from your 'calculator' module.
-
-    Parameters:
-        a: the length one of the sides of the triangle.
-        b: the length the other non-hypotenuse side of the triangle.
-    Returns:
-        The length of the triangle's hypotenuse.
-    """
-    raise NotImplementedError("Problem 3 Incomplete")
+    import calculator
+    sumofsquares=calculator.product(a,a)+calculator.product(b,b)
+    c=calculator.sqrt(sumofsquares)
+    return c
+    
 
 
 # Problem 4
