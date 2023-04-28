@@ -1,51 +1,47 @@
 # numpy_intro.py
 """Python Essentials: Intro to NumPy.
-<Name>
-<Class>
-<Date>
+<Alexandra Wold>
+<MTH 420>
+<4/28>
 """
 
-
+import numpy as np
 def prob1():
-    """ Define the matrices A and B as arrays. Return the matrix product AB. """
-    raise NotImplementedError("Problem 1 Incomplete")
+    A = np.array([[3,-1,4],[1,5,-9]])
+    B = np.array([[2,6,-5,3],[5,-8,9,7],[9,-3,-2,-3]])
+    print(A@B)
 
 
 def prob2():
-    """ Define the matrix A as an array. Return the matrix -A^3 + 9A^2 - 15A. """
-    raise NotImplementedError("Problem 2 Incomplete")
+    A = np.array([[3,1,4],[1,5,9],[-5,3,1]])
+    B = -1*((A@A)@A)
+    C = 9*(A@A)
+    D = -15*A
+    print(B+C+D)
 
 
 def prob3():
-    """ Define the matrices A and B as arrays using the functions presented in
-    this section of the manual (not np.array()). Calculate the matrix product ABA,
-    change its data type to np.int64, and return it.
-    """
-    raise NotImplementedError("Problem 3 Incomplete")
+    A = np.ones((7,7))
+    A = np.triu(A)
+    print(A)
+    B1 = np.full((7,7),-1)
+    B2 = np.full((7,7),5)
+    B = np.tril(B1) + np.triu(B2) + -5*np.eye(7,7)
+    print(B)
+    C = ((A@B)@A)
+    C = C.astype(np.int64)
+    print(C)
 
 
 def prob4(A):
-    """ Make a copy of 'A' and use fancy indexing to set all negative entries of
-    the copy to 0. Return the resulting array.
-
-    Example:
-        >>> A = np.array([-3,-1,3])
-        >>> prob4(A)
-        array([0, 0, 3])
-    """
-    raise NotImplementedError("Problem 4 Incomplete")
+    AC = np.copy(A)
+    negatives = AC<0
+    AC[negatives] = 0
+    print(AC)
 
 
 def prob5():
-    """ Define the matrices A, B, and C as arrays. Use NumPy's stacking functions
-    to create and return the block matrix:
-                                | 0 A^T I |
-                                | A  0  0 |
-                                | B  0  C |
-    where I is the 3x3 identity matrix and each 0 is a matrix of all zeros
-    of the appropriate size.
-    """
-    raise NotImplementedError("Problem 5 Incomplete")
+    
 
 
 def prob6(A):
