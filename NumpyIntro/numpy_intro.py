@@ -41,7 +41,13 @@ def prob4(A):
 
 
 def prob5():
-    
+    A=np.array([[0,2,4],[1,3,5]])
+    B=np.array([[3,0,0],[3,3,0],[3,3,3]])
+    C=np.array([[-2,0,0],[0,-2,0],[0,0,-2]])
+    AT=A.T
+    print(A)
+    print(B)
+    print(C)
 
 
 def prob6(A):
