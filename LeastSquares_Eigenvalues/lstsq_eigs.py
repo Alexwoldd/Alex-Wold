@@ -1,8 +1,8 @@
 # lstsq_eigs.py
 """Volume 1: Least Squares and Computing Eigenvalues.
-<Name>
-<Class>
-<Date>
+<Alexandra Wold>
+<MTH 420>
+<5/12/23>
 """
 
 # (Optional) Import functions from your QR Decomposition lab.
@@ -16,34 +16,75 @@ from matplotlib import pyplot as plt
 
 # Problem 1
 def least_squares(A, b):
-    """Calculate the least squares solutions to Ax = b by using the QR
-    decomposition.
-
-    Parameters:
-        A ((m,n) ndarray): A matrix of rank n <= m.
-        b ((m, ) ndarray): A vector of length m.
-
-    Returns:
-        x ((n, ) ndarray): The solution to the normal equations.
-    """
-    raise NotImplementedError("Problem 1 Incomplete")
+    q,r=np.linalg.qr(A, mode="reduced")
+    qb=(q.T).dot(b)
+    c=np.linalg.solve(r, qb)
+    return c
 
 # Problem 2
 def line_fit():
-    """Find the least squares line that relates the year to the housing price
-    index for the data in housing.npy. Plot both the data points and the least
-    squares line.
-    """
-    raise NotImplementedError("Problem 2 Incomplete")
+    house=np.load("housing.npy")
+    
+    A=np.column_stack((house[:,0], np.ones(house[:,0].size)))
+    b=house[:,1]
+    x=least_squares(A,b)
+    
+    plt.plot(house[:,0], b, 'o')
+    plt.plot(house[:,0], x[0]*house[:,0]+x[1], 'g-') 
+    return 
+    
 
 
 # Problem 3
 def polynomial_fit():
-    """Find the least squares polynomials of degree 3, 6, 9, and 12 that relate
-    the year to the housing price index for the data in housing.npy. Plot both
-    the data points and the least squares polynomials in individual subplots.
-    """
-    raise NotImplementedError("Problem 3 Incomplete")
+    house=np.load("housing.npy")
+    
+    A=np.vander(house[:,0], 3)
+    b=house[:,1]
+    x=least_squares(A,b)
+    
+    A2=np.vander(house[:,0], 4)
+    x2=least_squares(A2,b)
+    f2=np.zeros_like(house[:,0])
+    for i in range(4):
+        f2=f2+x2[i]*house[:,0]**(3-i)
+    plt.subplot(411)
+    plt.plot(house[:,0], f2, 'g-')
+    plt.plot(house[:,0], b, 'o')
+    
+    A3=np.vander(house[:,0], 7)
+    x3=least_squares(A3,b)
+    f3=np.zeros_like(house[:,0])
+    for i in range(7):
+        f3=f3+x3[i]*house[:,0]**(6-i)
+    plt.subplot(412)
+    plt.plot(house[:,0], f3, 'g-')
+    plt.plot(house[:,0], b, 'o')
+    
+    
+    
+    A4=np.vander(house[:,0], 10)
+    x4=least_squares(A4,b)
+    f4=np.zeros_like(house[:,0])
+    for i in range(10):
+        f4=f4+x4[i]*house[:,0]**(9-i)
+    plt.subplot(413)
+    plt.plot(house[:,0], f4, 'g-')
+    plt.plot(house[:,0], b, 'o')
+    
+    A5=np.vander(house[:,0], 13)
+    x5=least_squares(A5,b)
+    f5=np.zeros_like(house[:,0])
+    for i in range(13):
+        f5=f5+x5[i]*house[:,0]**(12-i)
+    plt.subplot(414)
+    plt.plot(house[:,0], f5, 'g-')
+    plt.plot(house[:,0], b, 'o')
+    
+    
+
+    return 
+    
 
 
 def plot_ellipse(a, b, c, d, e):
