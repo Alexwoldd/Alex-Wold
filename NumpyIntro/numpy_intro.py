@@ -9,7 +9,7 @@ import numpy as np
 def prob1():
     A = np.array([[3,-1,4],[1,5,-9]])
     B = np.array([[2,6,-5,3],[5,-8,9,7],[9,-3,-2,-3]])
-    print(A@B)
+    return(A@B)
 
 
 def prob2():
@@ -17,7 +17,7 @@ def prob2():
     B = -1*((A@A)@A)
     C = 9*(A@A)
     D = -15*A
-    print(B+C+D)
+    return(B+C+D)
 
 
 def prob3():
@@ -31,13 +31,14 @@ def prob3():
     C = ((A@B)@A)
     C = C.astype(np.int64)
     print(C)
+    return
 
 
 def prob4(A):
     AC = np.copy(A)
     negatives = AC<0
     AC[negatives] = 0
-    print(AC)
+    return(AC)
 
 
 def prob5():
@@ -48,6 +49,7 @@ def prob5():
     print(A)
     print(B)
     print(C)
+    return
 
 
 def prob6(A):
