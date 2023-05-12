@@ -45,3 +45,46 @@ Comments:
 
 -------------------------------------------------------------------------------
 
+05/11/23 18:28
+
+Problem 2 (5 points):
+sphere_volume(5) failed
+	Correct response: 523.5983333333332
+	Student response: 294.52406249999996
+sphere_volume(3.14) failed
+	Correct response: 129.68124959861333
+	Student response: 72.94570289922
+Score += 0
+
+Problem 3 (5 points):
+isolate() failed
+Score += 4
+
+Problem 4 (10 points):
+backward('abcde') failed
+	Correct response: 'edcba'
+	Student response: 'de'
+backward('TK421') failed
+	Correct response: '124KT'
+	Student response: '21'
+Score += 5
+
+Problem 5 (5 points):
+NotImplementedError: Problem 5 Incomplete
+
+Problem 6 (5 points):
+NotImplementedError: Problem 6 Incomplete
+
+Problem 7 (10 points):
+NotImplementedError: Problem 7 Incomplete
+
+Problem 8 (5 points):
+NotImplementedError: Problem 8 Incomplete
+
+Code Quality (5 points):
+Score += 5
+
+Total score: 14/50 = 28.0%
+
+-------------------------------------------------------------------------------
+
