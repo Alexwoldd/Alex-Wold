@@ -30,8 +30,7 @@ def prob3():
     print(B)
     C = ((A@B)@A)
     C = C.astype(np.int64)
-    print(C)
-    return
+    return C
 
 
 def prob4(A):
@@ -49,7 +48,7 @@ def prob5():
     print(A)
     print(B)
     print(C)
-    return
+    return C
 
 
 def prob6(A):
