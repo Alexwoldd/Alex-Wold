@@ -1,8 +1,8 @@
 # drazin.py
 """Volume 1: The Drazin Inverse.
-<Name>
-<Class>
-<Date>
+<Alexandra Wold>
+<MTH 420>
+<5/19/23>
 """
 
 import numpy as np
@@ -40,17 +40,7 @@ def index(A, tol=1e-5):
 
 # Problem 1
 def is_drazin(A, Ad, k):
-    """Verify that a matrix Ad is the Drazin inverse of A.
-
-    Parameters:
-        A ((n,n) ndarray): An nxn matrix.
-        Ad ((n,n) ndarray): A candidate for the Drazin inverse of A.
-        k (int): The index of A.
-
-    Returns:
-        (bool) True of Ad is the Drazin inverse of A, False otherwise.
-    """
-    raise NotImplementedError("Problem 1 Incomplete")
+    
 
 
 # Problem 2
