@@ -75,7 +75,7 @@ def prob6():
     A, B = np.meshgrid(a,b)
     C=(((np.sin(A))*(np.sin(B)))/(A*B))
     plt.subplot(1,2,1)
-    plt.pcolormesh(A,B,C, cmap="magma", shading="auto")
+    plt.pcolormesh(A,B,C, cmap="magma")
     plt.colorbar()
     plt.subplot(1,2,2)
     plt.contour(A,B,C,20, cmap="magma")

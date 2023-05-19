@@ -22,38 +22,38 @@ print(prob1(my_list))
 def prob2():
     int1 = 4
     int2 = int1
-if int1 == int2:
-    print("this is mutable")
-else:
-    print("this is immutable")
+    if int1 == int2:
+        print("this is mutable")
+    else:
+        print("this is immutable")
 #list
-college = ("oregon","state","university")
-OSU = college
-if college == OSU:
-    print("this is mutable")
-else:
-    print("this is immuatble")
+    college = ("oregon","state","university")
+    OSU = college
+    if college == OSU:
+        print("this is mutable")
+    else:
+        print("this is immuatble")
 #str
-Str1 = "Hello"
-Str2 = Str1 
-if Str1 == Str2:
-    print("this is mutable")
-else:
-    print("this is immutable")
+    Str1 = "Hello"
+    Str2 = Str1 
+    if Str1 == Str2:
+        print("this is mutable")
+    else:
+        print("this is immutable")
 #tuple
-tuple1 = (1,2,3)
-tuple2 = tuple1
-if tuple1 == tuple2:
-    print("this is mutable")
-else:
-    print("this is immutable")
+    tuple1 = (1,2,3)
+    tuple2 = tuple1
+    if tuple1 == tuple2:
+        print("this is mutable")
+    else:
+        print("this is immutable")
 #set
-set1= {1,2,3}
-set2 = set1
-if set1 == set2:
-    print("this is mutable")
-else:
-    print("this is immutable")
+    set1= {1,2,3}
+    set2 = set1
+    if set1 == set2:
+        print("this is mutable")
+    else:
+        print("this is immutable")
 
 
 
