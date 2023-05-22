@@ -10,15 +10,7 @@ from scipy import linalg as la
 
 
 # Helper function for problems 1 and 2.
-def index(A, tol=1e-5):
-    """Compute the index of the matrix A.
-
-    Parameters:
-        A ((n,n) ndarray): An nxn matrix.
-
-    Returns:
-        k (int): The index of A.
-    """
+def index(A, tol=1e-4):
 
     # test for non-singularity
     if not np.isclose(la.det(A), 0):
@@ -40,78 +32,68 @@ def index(A, tol=1e-5):
 
 # Problem 1
 def is_drazin(A, Ad, k):
+    X=A@Ad
+    Y=Ad@A
+    if np.allclose(X,Y,rtol=1e-4):
+        C=1
+    else:
+        C=0
     
+    AK=np.linalg.matrix_power(A,k)
+    AK1=np.linalg.matrix_power(A,k+1)
+    N=AK1@Ad
+    
+    if np.allclose(AK,N,rtol=1e-4):
+        C1=1
+    else:
+        C1=0
+    Z=(Ad@A)@Ad
+    
+    if np.allclose(Ad,Z,rtol=1e-4):
+        C2=1
+    else:
+        C2=0
+    
+    if (C+C1+C2)==3:
+        return True
+    else:
+        return False
+    
+        
 
 
 # Problem 2
 def drazin_inverse(A, tol=1e-4):
-    """Compute the Drazin inverse of A.
+    n=A.shape[0]
+    T,Z=la.schur(A)
+    X = lambda x: abs(x) > tol
+    T1,Z1,k1 = la.schur(A, sort=X)
+    
+    X1=Z1[:,:k1]
+    
+    Y = lambda x: abs(x) <= tol
+    T2,Z2,k2 = la.schur(A, sort=Y)
+    
+    Y1=Z2[:,:k2]
+    
+    C=np.concatenate((X1,Y1),axis=1)
+    I=la.inv(C)
+    V=(I@A)@C
+    U=np.zeros_like(A,dtype=float)
+    
+    if k1!=0:
+        B=V[:k1,:k2]
+    
+    BI=la.inv(B)
+    U[:k1,:k1]=BI
+    Ad=(C@U)@I
+    return Ad
+    
 
-    Parameters:
-        A ((n,n) ndarray): An nxn matrix.
-
-    Returns:
-       ((n,n) ndarray) The Drazin inverse of A.
-    """
-    raise NotImplementedError("Problem 2 Incomplete")
 
 
 # Problem 3
 def effective_resistance(A):
-    """Compute the effective resistance for each node in a graph.
-
-    Parameters:
-        A ((n,n) ndarray): The adjacency matrix of an undirected graph.
-
-    Returns:
-        ((n,n) ndarray) The matrix where the ijth entry is the effective
-        resistance from node i to node j.
-    """
-    raise NotImplementedError("Problem 3 Incomplete")
+   
 
 
-# Problems 4 and 5
-class LinkPredictor:
-    """Predict links between nodes of a network."""
-
-    def __init__(self, filename='social_network.csv'):
-        """Create the effective resistance matrix by constructing
-        an adjacency matrix.
-
-        Parameters:
-            filename (str): The name of a file containing graph data.
-        """
-        raise NotImplementedError("Problem 4 Incomplete")
-
-
-    def predict_link(self, node=None):
-        """Predict the next link, either for the whole graph or for a
-        particular node.
-
-        Parameters:
-            node (str): The name of a node in the network.
-
-        Returns:
-            node1, node2 (str): The names of the next nodes to be linked.
-                Returned if node is None.
-            node1 (str): The name of the next node to be linked to 'node'.
-                Returned if node is not None.
-
-        Raises:
-            ValueError: If node is not in the graph.
-        """
-        raise NotImplementedError("Problem 5 Incomplete"
-
-
-    def add_link(self, node1, node2):
-        """Add a link to the graph between node 1 and node 2 by updating the
-        adjacency matrix and the effective resistance matrix.
-
-        Parameters:
-            node1 (str): The name of a node in the network.
-            node2 (str): The name of a node in the network.
-
-        Raises:
-            ValueError: If either node1 or node2 is not in the graph.
-        """
-        raise NotImplementedError("Problem 5 Incomplete")
