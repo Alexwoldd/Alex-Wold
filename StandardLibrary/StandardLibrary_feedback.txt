@@ -4,3 +4,27 @@ NameError while loading 'standard_library.py': name 'int1' is not defined
 
 -------------------------------------------------------------------------------
 
+05/26/23 18:36
+
+Problem 1 (5 points):
+Score += 5
+
+Problem 2 (5 points):
+Incorrect response(s)
+(Hint: 3 are immutable and 2 are mutable)
+Score += 3
+
+Problem 3 (10 points):
+ModuleNotFoundError: No module named 'calculator'
+
+Problem 4 (10 points):
+NotImplementedError: Problem 4 Incomplete
+
+Code Quality (20 points):
+Code can be improved for power_set()
+Score += 0
+
+Total score: 8/50 = 16.0%
+
+-------------------------------------------------------------------------------
+
