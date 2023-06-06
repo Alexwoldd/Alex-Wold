@@ -1,0 +1,24 @@
+06/06/23 07:23
+
+Problem 1 (5 points):
+Score += 5
+
+Problem 2 (5 points):
+TypeError: Invalid return type 'NoneType'
+
+Problem 3 (5 points):
+NameError: name 'prob' is not defined
+
+Problem 4 (5 points):
+NameError: name 'prob' is not defined
+
+Problem 5 (10 points):
+NotImplementedError: Problem 5 Incomplete
+
+Code Quality (20 points):
+Score += 20
+
+Total score: 25/50 = 50.0%
+
+-------------------------------------------------------------------------------
+
