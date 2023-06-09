@@ -63,8 +63,7 @@ def prob4():
     return plt.show()
 
 
-# Problem 5
-def prob5():
+
 
 
 
