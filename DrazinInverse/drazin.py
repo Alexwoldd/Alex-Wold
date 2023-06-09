@@ -1,39 +1,28 @@
-# drazin.py
-"""Volume 1: The Drazin Inverse.
-<Alexandra Wold>
-<MTH 420>
-<5/19/23>
-"""
-
 import numpy as np
 from scipy import linalg as la
 
-
-# Helper function for problems 1 and 2.
-def index(A, tol=1e-4):
-
-    # test for non-singularity
-    if not np.isclose(la.det(A), 0):
+def index(A, tol=1e-5):
+    if not np.isclose(la.det(A),0):
         return 0
-
+    
     n = len(A)
-    k = 1
-    Ak = A.copy()
-    while k <= n:
+    k=1
+    Ak=A.copy()
+    
+    while k<=n:
         r1 = np.linalg.matrix_rank(Ak)
         r2 = np.linalg.matrix_rank(np.dot(A,Ak))
         if r1 == r2:
             return k
         Ak = np.dot(A,Ak)
         k += 1
-
+        
     return k
 
-
-# Problem 1
 def is_drazin(A, Ad, k):
     X=A@Ad
     Y=Ad@A
+    
     if np.allclose(X,Y,rtol=1e-4):
         C=1
     else:
@@ -47,8 +36,8 @@ def is_drazin(A, Ad, k):
         C1=1
     else:
         C1=0
+        
     Z=(Ad@A)@Ad
-    
     if np.allclose(Ad,Z,rtol=1e-4):
         C2=1
     else:
@@ -59,10 +48,6 @@ def is_drazin(A, Ad, k):
     else:
         return False
     
-        
-
-
-# Problem 2
 def drazin_inverse(A, tol=1e-4):
     n=A.shape[0]
     T,Z=la.schur(A)
@@ -87,13 +72,6 @@ def drazin_inverse(A, tol=1e-4):
     BI=la.inv(B)
     U[:k1,:k1]=BI
     Ad=(C@U)@I
+    
     return Ad
     
-
-
-
-# Problem 3
-def effective_resistance(A):
-   
-
-
