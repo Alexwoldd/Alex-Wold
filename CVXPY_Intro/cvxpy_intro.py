@@ -57,7 +57,7 @@ def prob3():
     constraints=[A[0, :]@x==13, A[1, :]@x==5, A[2, :]@x==8, A[3,:]@x==7, A[4,:]@x==2, A[5,:]@x==4, P@x>=0]
     
     problem=cp.Problem(objective, constraints)
-    mv=prob.solve()
+    mv=problem.solve()
     return [x.value, mv]
 
 
@@ -67,7 +67,7 @@ def prob4():
     B=np.array([3,0,1])
     x=cp.Variable(3)
     problem=cp.Problem(cp.Minimize(0.5*cp.quad_form(x, A)+B.T@x))
-    solution=prob.solve()
+    solution=problem.solve()
     return [x.value, solution]
 
 

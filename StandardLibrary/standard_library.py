@@ -22,13 +22,15 @@ print(prob1(my_list))
 def prob2():
     int1 = 4
     int2 = int1
+    int1=5
     if int1 == int2:
         print("this is mutable")
     else:
         print("this is immutable")
 #list
-    college = ("oregon","state","university")
+    college = ["oregon","state","university"]
     OSU = college
+    OSU.append("student")
     if college == OSU:
         print("this is mutable")
     else:
@@ -36,6 +38,7 @@ def prob2():
 #str
     Str1 = "Hello"
     Str2 = Str1 
+    Str1="hi"
     if Str1 == Str2:
         print("this is mutable")
     else:
@@ -43,6 +46,7 @@ def prob2():
 #tuple
     tuple1 = (1,2,3)
     tuple2 = tuple1
+    tuple1=(4,5,6)
     if tuple1 == tuple2:
         print("this is mutable")
     else:
@@ -50,6 +54,7 @@ def prob2():
 #set
     set1= {1,2,3}
     set2 = set1
+    set1.add(0)
     if set1 == set2:
         print("this is mutable")
     else:
