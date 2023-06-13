@@ -10,3 +10,28 @@ IndentationError while loading 'matplotlib_intro.py': expected an indented block
 
 -------------------------------------------------------------------------------
 
+06/13/23 20:34
+
+Problem 1 (10 points):
+TypeError: float() argument must be a string or a number, not 'builtin_function_or_method'
+
+Problem 2 (10 points):
+Score += 10
+
+Problem 3 (10 points):
+no plot
+Score += 0
+
+Problem 4 (5 points):
+Score += 5
+
+Problem 6 (10 points):
+Score += 10
+
+Code Quality (5 points):
+Score += 5
+
+Total score: 30/50 = 60.0%
+
+-------------------------------------------------------------------------------
+

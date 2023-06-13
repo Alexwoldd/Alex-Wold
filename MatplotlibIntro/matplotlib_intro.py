@@ -18,8 +18,7 @@ def prob1():
     for i in range(10):
         var_array=var_of_means(100*(i+1))
     plt.plot(var_array)
-    return plt.show()
-    
+    plt.show()
 
 
 # Problem 2
@@ -28,7 +27,7 @@ def prob2():
     plt.plot(a,np.sin(a))
     plt.plot(a,np.cos(a))
     plt.plot(a,np.arctan(a))
-    return plt.show()
+    plt.show()
 
 
 # Problem 3
@@ -39,7 +38,7 @@ def prob3():
     plt.plot(a2, (1/(a2-1)), 'm--',linewidth=4)
     plt.xlim(-2,6)
     plt.ylim(-6,6)
-    return plt.show
+    plt.show
 
 
 # Problem 4
@@ -57,10 +56,10 @@ def prob4():
     plt.subplot(2,2,4)
     plt.plot(x, 2*np.sin(2*x), 'm:')
     plt.title("d")
-    
+
     plt.axis([0,2*np.pi,-2,2])
     plt.suptitle("abcd")
-    return plt.show()
+    plt.show()
 
 
 
@@ -80,4 +79,4 @@ def prob6():
     plt.contour(A,B,C,20, cmap="magma")
     plt.colorbar()
     plt.axis([-2*np.pi,2*np.pi,-2*np.pi,2*np.pi])
-    return plt.show()
+    plt.show()
