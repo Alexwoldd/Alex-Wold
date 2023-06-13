@@ -5,6 +5,7 @@
 <4/28>
 """
 
+import calculator
 
 # Problem 1
 def prob1(L):
@@ -65,7 +66,6 @@ def prob2():
 
 # Problem 3
 def hypot(a, b):
-    import calculator
     sumofsquares=calculator.product(a,a)+calculator.product(b,b)
     c=calculator.sqrt(sumofsquares)
     return c
