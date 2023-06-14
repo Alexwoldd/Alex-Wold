@@ -18,9 +18,9 @@ def prob1():
     constraints = [A@x<=3, B@x<=1, C@x>=12, P@x>=0]
     problem = cp.Problem(objective, constraints)
     minv=(problem.solve())
-    print(problem.solve())
+    print(minv)
     print(x.value)
-    return [x.value, minv]
+    return x.value, minv
 
    
    
@@ -40,9 +40,9 @@ def l1Min(A, b):
     constraints.append(P@x>=0)
     problem = cp.Problem(objective, constraints)
     minv=(problem.solve())
-    print(problem.solve())
+    print(minv)
     print(x.value)
-    return [x.value, minv]
+    return x.value, minv
     
 
 
