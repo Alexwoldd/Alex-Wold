@@ -4,3 +4,21 @@ SyntaxError while loading 'drazin.py': unexpected EOF while parsing (drazin.py, 
 
 -------------------------------------------------------------------------------
 
+06/14/23 00:46
+
+Problem 1 (10 points):
+Score += 10
+
+Problem 2 (10 points):
+UnboundLocalError: local variable 'B' referenced before assignment
+
+Problem 3 (10 points):
+AttributeError: module 'AlexandraWold.DrazinInverse.drazin' has no attribute 'effective_resistance'
+
+Code Quality (20 points):
+Score += 20
+
+Total score: 30/50 = 60.0%
+
+-------------------------------------------------------------------------------
+
