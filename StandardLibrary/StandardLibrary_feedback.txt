@@ -98,3 +98,25 @@ Total score: 20/50 = 40.0%
 
 -------------------------------------------------------------------------------
 
+06/20/23 20:19
+
+Problem 1 (5 points):
+Score += 5
+
+Problem 2 (5 points):
+Score += 5
+
+Problem 3 (10 points):
+Score += 10
+
+Problem 4 (10 points):
+NotImplementedError: Problem 4 Incomplete
+
+Code Quality (20 points):
+Code can be improved for power_set()
+Score += 0
+
+Total score: 20/50 = 40.0%
+
+-------------------------------------------------------------------------------
+
