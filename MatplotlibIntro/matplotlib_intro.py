@@ -1,4 +1,4 @@
-# matplotlib_intro.py
+#  matplotlib_intro.py
 """Python Essentials: Intro to Matplotlib.
 <Alexandra Wold>
 <MTH 420>
@@ -16,7 +16,7 @@ def var_of_means(n):
 def prob1():
     var_array=np.zeros((1,10))
     for i in range(10):
-        var_array=var_of_means(100*(i+1))
+        var_array[i]=var_of_means(100*(i+1))
     plt.plot(var_array)
     plt.show()
 
@@ -38,7 +38,7 @@ def prob3():
     plt.plot(a2, (1/(a2-1)), 'm--',linewidth=4)
     plt.xlim(-2,6)
     plt.ylim(-6,6)
-    plt.show
+    plt.show()
 
 
 # Problem 4

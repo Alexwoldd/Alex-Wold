@@ -35,3 +35,166 @@ Total score: 30/50 = 60.0%
 
 -------------------------------------------------------------------------------
 
+06/20/23 20:29
+
+Problem 1 (10 points):
+TypeError: float() argument must be a string or a number, not 'builtin_function_or_method'
+
+Problem 2 (10 points):
+prob2() plot does not match specifications
+Score += 0
+
+Problem 3 (10 points):
+prob3() plot does not match specifications
+Score += 0
+
+Problem 4 (5 points):
+prob4() plot does not match specifications
+Score += 0
+
+Problem 6 (10 points):
+prob6() plot does not match specifications
+Score += 0
+
+Code Quality (5 points):
+Code can be improved for prob4()
+Score += 0
+
+Total score: 0/50 = 0.0%
+
+-------------------------------------------------------------------------------
+
+06/20/23 20:31
+
+Problem 1 (10 points):
+TypeError: float() argument must be a string or a number, not 'builtin_function_or_method'
+
+Problem 2 (10 points):
+Score += 10
+
+Problem 3 (10 points):
+no plot
+Score += 0
+
+Problem 4 (5 points):
+Score += 5
+
+Problem 6 (10 points):
+Score += 10
+
+Code Quality (5 points):
+Score += 5
+
+Total score: 30/50 = 60.0%
+
+-------------------------------------------------------------------------------
+
+06/20/23 20:34
+
+Problem 1 (10 points):
+TypeError: float() argument must be a string or a number, not 'builtin_function_or_method'
+
+Problem 2 (10 points):
+Score += 10
+
+Problem 3 (10 points):
+no plot
+Score += 0
+
+Problem 4 (5 points):
+Score += 5
+
+Problem 6 (10 points):
+Score += 10
+
+Code Quality (5 points):
+Score += 5
+
+Total score: 30/50 = 60.0%
+
+-------------------------------------------------------------------------------
+
+06/20/23 20:37
+
+Problem 1 (10 points):
+TypeError: Cannot interpret '10' as a data type
+
+Problem 2 (10 points):
+Score += 10
+
+Problem 3 (10 points):
+Score += 10
+
+Problem 4 (5 points):
+Score += 5
+
+Problem 6 (10 points):
+Score += 10
+
+Code Quality (5 points):
+Score += 5
+
+Total score: 40/50 = 80.0%
+
+-------------------------------------------------------------------------------
+
+06/20/23 20:38
+
+SyntaxError while loading 'matplotlib_intro.py': cannot assign to function call (matplotlib_intro.py, line 19)
+
+-------------------------------------------------------------------------------
+
+06/20/23 20:40
+
+SyntaxError while loading 'matplotlib_intro.py': cannot assign to function call (matplotlib_intro.py, line 19)
+
+-------------------------------------------------------------------------------
+
+06/20/23 20:41
+
+Problem 1 (10 points):
+NameError: name 'var_array' is not defined
+
+Problem 2 (10 points):
+Score += 10
+
+Problem 3 (10 points):
+Score += 10
+
+Problem 4 (5 points):
+Score += 5
+
+Problem 6 (10 points):
+Score += 10
+
+Code Quality (5 points):
+Score += 5
+
+Total score: 40/50 = 80.0%
+
+-------------------------------------------------------------------------------
+
+06/20/23 20:42
+
+Problem 1 (10 points):
+TypeError: float() argument must be a string or a number, not 'builtin_function_or_method'
+
+Problem 2 (10 points):
+Score += 10
+
+Problem 3 (10 points):
+Score += 10
+
+Problem 4 (5 points):
+Score += 5
+
+Problem 6 (10 points):
+Score += 10
+
+Code Quality (5 points):
+Score += 5
+
+Total score: 40/50 = 80.0%
+
+-------------------------------------------------------------------------------
+
