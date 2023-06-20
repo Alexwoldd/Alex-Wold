@@ -29,8 +29,8 @@ def prob3():
     B = np.tril(B1) + np.triu(B2) + -5*np.eye(7,7)
     print(B)
     C = ((A@B)@A)
-    C = C.astype(np.int64)
-    return C
+    return C.astype(np.int64)
+
 
 
 def prob4(A):
